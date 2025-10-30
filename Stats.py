@@ -9,14 +9,14 @@ def prop_above(ls):
     return (i/len(ls))*100
 def median(ls):
     middle = int(len(ls)/2)
-    return ls[middle]
+    middle_1 = middle +1 
+    return (ls[middle]+ls[middle_1])/2
 
 def make_hist(data,n_bins):
     plt.hist(data,bins = n_bins,color ='black',ec="blue")
     plt.title("Hours of Exercise")
     plt.ylabel("Counts")
     plt.show()             
-
 new_list =[]
 last_list=[]
 fhand = open("StudentExercise.csv")
