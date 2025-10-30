@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 def average(ls):
     return sum(ls)/len(ls)
 def prop_above(ls):
@@ -9,9 +10,12 @@ def prop_above(ls):
 def median(ls):
     middle = int(len(ls)/2)
     return ls[middle]
- 
-    
-               
+
+def make_hist(data,n_bins):
+    plt.hist(data,bins = n_bins,color ='black',ec="blue")
+    plt.title("Hours of Exercise")
+    plt.ylabel("Counts")
+    plt.show()             
 
 new_list =[]
 last_list=[]
@@ -32,6 +36,7 @@ sorting = last_list.sort()
 print("The Average is",int(average(last_list)))
 print("The proprotions above are",int(prop_above(last_list)),"%")
 print("The median is",median(last_list))
+make_hist(last_list,15)
 #for numbers in last_list:
   # the_average = average(numbers)
 #print("The average is",the_average)
