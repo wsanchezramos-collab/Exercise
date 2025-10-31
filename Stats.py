@@ -13,7 +13,7 @@ def median(ls):
     return (ls[middle]+ls[middle_1])/2
 
 def make_hist(data,n_bins):
-    plt.hist(data,bins = n_bins,color ='black',ec="blue")
+    plt.hist(data,bins = n_bins)
     plt.title("Hours of Exercise")
     plt.ylabel("Counts")
     plt.show()             
@@ -26,20 +26,14 @@ for line in fhand:
     The_list = list(words)
     if The_list[0]:
         new_list.append(The_list[0])
-#print(new_list)
 for numbers in new_list:
     last_list.append(float(numbers))
-
-
 sorting = last_list.sort()
-#print(last_list)
 print("The Average is",int(average(last_list)))
-print("The proprotions above are",int(prop_above(last_list)),"%")
+print("The proprotions above the average are at ",int(prop_above(last_list)),"%")
 print("The median is",median(last_list))
 make_hist(last_list,15)
-#for numbers in last_list:
-  # the_average = average(numbers)
-#print("The average is",the_average)
+
     
 
 
