@@ -6,7 +6,7 @@ def prop_above(ls):
     for items in last_list:
         if items > average(ls):
             i+=1
-    return (i/len(ls))
+    return ((i/len(ls)))*100
 def median(ls):
     middle = int(len(ls)/2)
     middle_1 = ls[middle]
@@ -31,7 +31,7 @@ for numbers in new_list:
     last_list.append(float(numbers))
 sorting = last_list.sort()
 print("The Average is",average(last_list))
-print("The proprotions above the average are at ",prop_above(last_list))
+print("The proprotions above the average are at ",prop_above(last_list),"%")
 print("The median is",median(last_list))
 make_hist(last_list,15)
 
